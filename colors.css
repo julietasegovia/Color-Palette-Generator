@@ -71,12 +71,11 @@ h4{
 }
 
 .colors{
-    display: grid;
-    grid-template-columns: repeat(1, fr);
-    grid-gap: 1rem;
+    display: flex;
 }
 
 .color{
+    width: 1400px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -84,10 +83,11 @@ h4{
     border-radius: 1rem;
     color: #fff;
     background-color: var(--dark);
+    gap: 1rem;
 }
 
 .color.copied {
-    border-color: red;
+    box-shadow: 0 0 0 3px red;
 }
 
 .lock-toggle {
@@ -95,7 +95,7 @@ h4{
     transition: 0.4s;
 }
 
-.lock-toggle.is-locked {
+.color.locked .lock-toggle {
     opacity: 1;
 }
 
